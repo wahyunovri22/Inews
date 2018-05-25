@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    tools:context="com.can.creative.inews.Activity.TambahVideoActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.2"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/no_image_found" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edt_judul"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@layout/border2"
+                                    android:ems="10"
+                                    android:hint="Judul ...."
+                                    android:paddingBottom="16dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingTop="16dp"
+                                    android:textAppearance="?android:textAppearanceMedium"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/img_ambil_gambar"
+                                android:layout_width="80dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignRight="@+id/ciFoto"
+                                android:layout_gravity="right|bottom"
+                                android:layout_marginBottom="7dp"
+                                android:src="@drawable/camera2"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txt_kategori"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pilih Daerah"/>
+            <Spinner
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spn_kategori">
+
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Deskripsi :"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edt_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@layout/border2"
+                android:ems="10"
+                android:hint="Deskripsi"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Link Video :"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="https://www.youtube.com/watch?v="
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@layout/border2"
+                android:ems="10"
+                android:hint="link"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            app:layout_anchor="@id/app_bar"
+            android:layout_marginBottom="160dp"
+            android:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/bg"
+            android:visibility="invisible"
+            android:src="@drawable/postcard"
+            android:layout_gravity="right|bottom" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            app:layout_anchor="@id/app_bar"
+            android:layout_marginBottom="80dp"
+            android:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/bg"
+            android:visibility="invisible"
+            android:src="@drawable/cancel"
+            android:layout_gravity="right|bottom" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_opsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            app:layout_anchor="@id/app_bar"
+
+            android:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:layout_gravity="right|bottom"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </FrameLayout>
+</ScrollView>

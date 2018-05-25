@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profil" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_add_to_queue_black_24dp"
+            android:title="Tambah Berita" />
+        <item
+            android:id="@+id/nav_add_video"
+            android:icon="@drawable/add_video"
+            android:title="Tambah Video" />
+        <item android:title="Other" >
+            <menu>
+                <item
+                    android:id="@+id/nav_manage"
+                    android:icon="@drawable/ic_markunread_mailbox_black_24dp"
+                    android:title="Approval" />
+                <item
+                    android:id="@+id/nav_approve_video"
+                    android:icon="@drawable/approve_video"
+                    android:title="Approval Video" />
+                <item
+                    android:id="@+id/nav_my_news"
+                    android:icon="@drawable/postcard"
+                    android:title="My news" />
+                <item
+                    android:id="@+id/nav_user"
+                    android:icon="@drawable/ic_person_black_24dp"
+                    android:title="Users" />
+                <item
+                    android:id="@+id/nav_approve_user"
+                    android:icon="@drawable/ic_person_black_24dp"
+                    android:title="Approval Users" />
+                <item
+                    android:id="@+id/nav_berita_tersimpan"
+                    android:icon="@drawable/berita_save"
+                    android:title="Berita Tersimpan" />
+                <item
+                    android:id="@+id/nav_static"
+                    android:icon="@drawable/ic_timeline_black_24dp"
+                    android:title="Static" />
+            </menu>
+        </item>
+    </group>
+    <item android:title="Communicate">
+    <menu>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </menu>
+    </item>
+
+
+</menu>

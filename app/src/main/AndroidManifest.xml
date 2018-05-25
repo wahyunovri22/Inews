@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.can.creative.inews">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".Activity.StatisticActivity"
+            android:label="Statistic"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.ProfilActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activity.AdminActivity"
+            android:label="@string/title_activity_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.TambahBeritaActivity"
+            android:label="Tambah Berita" />
+        <activity android:name=".Activity.DetailBeritaActivity" />
+        <activity
+            android:name=".Activity.ApprovalActivity"
+            android:label="Aprroval Berita"
+            android:parentActivityName=".Activity.AdminActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.AdminActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Berita.LihatActivity"
+            android:label="Lihat Berita"
+            android:parentActivityName=".Activity.TambahBeritaActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.TambahBeritaActivity" />
+        </activity>
+
+        <service android:name=".Service.Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.Firebase.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.UserActivity"
+            android:label="Daftar User"
+            android:parentActivityName=".Activity.AdminActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.AdminActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Berita.DetailBeritaDuaActivity"
+            android:label="Detail Berita"
+            android:parentActivityName=".Activity.ApprovalActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.ApprovalActivity" />
+        </activity>
+        <activity android:name=".Activity.Berita.DetailVideoActivity" />
+        <activity
+            android:name=".Activity.AdminDuaActivity"
+            android:label="@string/title_activity_admin_dua"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserHomeActivity"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.Berita.BeritaSayaActivity"
+            android:label="My News" />
+        <activity
+            android:name=".Activity.Berita.BeritaTersimpanActivity"
+            android:label="Berita Tersimpan" />
+        <activity
+            android:name=".Activity.Berita.ApprovalVideoActivity"
+            android:label="Approval Video"
+            android:parentActivityName=".Activity.AdminActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.AdminActivity" />
+        </activity>
+        <activity android:name=".Activity.TambahVideoActivity"
+            android:label="Tambah Video"></activity>
+        <activity android:name=".Activity.ApprovalUserActivity"
+            android:label="Approval User"></activity>
+    </application>
+
+</manifest>
